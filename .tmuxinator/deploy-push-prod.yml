@@ -1,0 +1,10 @@
+project_name: deploy-push-prod
+project_root: ~/git/ap-loadtester
+
+windows:
+  - deploy-watch:
+      layout: a006,191x55,0,0{95x55,0,0,20,95x55,96,0,22}
+
+      panes:
+        - source apenv/bin/activate; cd ~/git/deploy-tools/autopush; ./basic.sh 
+        - source apenv/bin/activate; cd ~/git/deploy-tools/autopush; ./watch.sh 
