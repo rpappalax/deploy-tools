@@ -1,3 +1,7 @@
+#!/bin/bash
+
+source config.sh
+
 echo "--------------------------------"
 echo "SENTRY TEST"
 echo "--------------------------------"
@@ -7,6 +11,6 @@ IP=`$CMD`
 echo "MY IP: $IP"
 echo
 echo
-curl -s https://updates-autopush.stage.mozaws.net/v1/err/crit | python -mjson.tool
+curl -s https://$HOST_UPDATES/v1/err/crit | python -mjson.tool
 echo
 echo
